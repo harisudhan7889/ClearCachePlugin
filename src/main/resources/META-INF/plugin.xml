@@ -1,0 +1,30 @@
+<idea-plugin>
+    <id>ClearCachePlugin</id>
+    <name>Clear Cache</name>
+    <version>1.0</version>
+    <idea-version since-build="181.5540.7"/>
+    <vendor email="hharans7889@gmail.com" url="">Hari</vendor>
+
+    <description>Clears the cache files based on your input.</description>
+
+    <extensions defaultExtensionNs="com.intellij">
+    </extensions>
+
+    <depends>com.intellij.modules.lang</depends>
+
+    <actions>
+        <group id="Cache.TopMenu"
+               text="_Cache"
+               description="Cache Toolbar Menu">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+            <action id="ClearCacheAction"
+                    class="com.hari.clearcaches.action.ClearCache"
+                    text="_ClearCache"
+                    description="Clears the cache.">
+                <keyboard-shortcut first-keystroke="control alt h" keymap="$default"/>
+            </action>
+        </group>
+
+    </actions>
+
+</idea-plugin>
