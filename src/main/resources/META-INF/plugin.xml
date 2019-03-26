@@ -3,9 +3,24 @@
     <name>Clear Cache</name>
     <version>1.0</version>
     <idea-version since-build="181.5540.7"/>
-    <vendor email="hharans7889@gmail.com" url="">Hari</vendor>
+    <vendor email="hharans7889@gmail.com" url="https://github.com/harisudhan7889/ClearCachePlugin">Hari</vendor>
 
-    <description>Clears the cache files based on your input.</description>
+    <description>
+        <![CDATA[
+        <b>Your project's cache will be stored in your .gradle folder. To remove your caches you have to traverse through the folders, which is really a time consuming activity.
+        An Idea to automate these process paved way for this plugin. Below are the steps to remember after installation.</b><br /><br />
+        <ul>
+            <li>After installation, do not forget to restart your android studio.</li>
+            <li>Now you would see one more item added in the tools menu named as Clear Cache.</li>
+            <li>If you select the Clear Cache menu item a popup will be displayed.</li>
+            <li>You will get all the packages with the package prefix given.</li>
+            <li>Select the package/packages to delete and click delete.</li>
+            <li>See <a href="https://github.com/harisudhan7889/ClearCachePlugin">Github</a> for more details.</li>
+        </ul>
+        ]]>
+    </description>
+
+    <change-notes>Initial release of the plugin.</change-notes>
 
     <extensions defaultExtensionNs="com.intellij">
     </extensions>
