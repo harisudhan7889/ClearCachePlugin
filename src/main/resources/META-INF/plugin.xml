@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>ClearCachePlugin</id>
     <name>Clear Cache</name>
-    <version>1.0</version>
+    <version>1.1</version>
     <idea-version since-build="181.5540.7"/>
     <vendor email="hharans7889@gmail.com" url="https://github.com/harisudhan7889/ClearCachePlugin">Hari</vendor>
 
