@@ -4,13 +4,16 @@ import com.hari.clearcaches.Callback
 import com.intellij.notification.NotificationDisplayType
 import com.intellij.notification.NotificationGroup
 import com.intellij.notification.NotificationType
+import com.intellij.openapi.application.WriteAction
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.DialogWrapper
 import com.intellij.openapi.vfs.LocalFileSystem
-import com.intellij.testFramework.deleteFile
+import com.intellij.openapi.vfs.VirtualFile
+import com.intellij.util.ThrowableRunnable
 import org.apache.commons.lang.SystemUtils
 import java.util.*
 import javax.swing.JComponent
+
 
 /**
  * @author Hari Hara Sudhan
@@ -132,6 +135,12 @@ class ClearCacheDialog constructor(private val project: Project): DialogWrapper(
             }
     }
 
+    private fun deleteFile(virtualFile: VirtualFile) {
+        val r = ThrowableRunnable<Throwable> {
+            virtualFile.delete(null)
+        }
+        WriteAction.run(r)
+    }
 
     /**
      * Displays the notification after the deletion of caches.
